@@ -1,13 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/musicSquare/musicSquare"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#db2c1f",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
