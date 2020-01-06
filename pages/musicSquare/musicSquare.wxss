@@ -1,1 +1,45 @@
 /* pages/musicSquare/musicSquare.wxss */
+.square_wrap{
+ background:linear-gradient(#b2aeac,#ffffff);
+ padding: 0 20rpx;
+ min-height:640rpx;
+}
+
+.square_wrap .header{
+    height: 80rpx;
+    color: #2e2e2e;
+    font-size:36rpx;
+    display: flex;
+}
+
+.square_wrap .title{
+    flex: 1;
+    text-align: center;
+    line-height: 80rpx;
+    font-weight: bolder;
+}
+
+.square_wrap .header .more{
+    height: 80rpx;
+    width: 40rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square_wrap .header .more image{
+    height: 45rpx;
+    width: 45rpx;
+}
+
+.square_wrap .header .back{
+    width: 40rpx;
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square_wrap .header .back image{
+    height: 40rpx;
+    width: 26rpx;
+}

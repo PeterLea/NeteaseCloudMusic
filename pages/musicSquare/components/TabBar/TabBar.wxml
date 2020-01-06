@@ -1,0 +1,11 @@
+<!--pages/musicSquare/components/TabBar/TabBar.wxml-->
+<view class="tabBar">
+  <view class="tab_list">
+    <view wx:for="{{hotCate}}" 
+    bindtap="handleClick"
+    data-name="{{item.name}}" 
+    wx:key="unique" 
+    class="{{currentTag===item.name?'tab_item active':'tab_item'}}"
+    >{{item.name}}</view>
+  </view>
+</view>

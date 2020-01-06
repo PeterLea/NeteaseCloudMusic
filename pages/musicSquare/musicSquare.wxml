@@ -1,2 +1,12 @@
-<!--pages/musicSquare/musicSquare.wxml-->
-<text>pages/musicSquare/musicSquare.wxml</text>
+<view class = "square_wrap">
+  <view class="header">
+    <view class="back">
+      <image src="../../assets/back.png" />
+    </view>
+    <text class="title">歌单广场</text>
+    <view class="more">
+      <image src="../../assets/more.png" />
+    </view>
+  </view>
+  <TabBar hotCate ="{{hotCate}}"></TabBar>
+</view>

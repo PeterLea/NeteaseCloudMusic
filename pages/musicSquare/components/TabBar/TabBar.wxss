@@ -1,0 +1,22 @@
+/* pages/musicSquare/components/TabBar/TabBar.wxss */
+.tabBar{
+  height: 80rpx;
+  overflow-y: scroll;
+}
+.tab_list{
+  width: 1600rpx;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.tab_item{
+  line-height: 80rpx;
+  padding:0 12rpx ;
+  text-align: center;
+  font-weight: bold;
+}
+.tab_item.active{
+  color: #ff3a3a;
+  border-bottom: 4rpx solid #ff3a3a;
+}
