@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/rank/rank",
     "pages/index/index",
-    "pages/musicSquare/musicSquare"
+    "pages/musicSquare/musicSquare",
+    "pages/rank/rank"
   ],
   "window": {
     "backgroundTextStyle": "light",
