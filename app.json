@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/recommendDaily/recommendDaily",
     "pages/index/index",
     "pages/musicSquare/musicSquare"
   ],

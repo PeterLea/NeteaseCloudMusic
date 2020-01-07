@@ -1,0 +1,36 @@
+<!--components/songList/songList.wxml-->
+<scroll-view 
+  class="wrap" 
+  scroll-y="true"
+  upper-threshold="0" 
+  bindscrolltoupper="handletoTop"
+  bindscrolltolower="handletoBottom"
+>
+  <slot name="tips"></slot>
+  <view class="scrollBig">
+    <slot name="playmenu"></slot>
+    <!-- <view class="playmenu">12</view> -->
+    <scroll-view 
+      class="scrollSmall" 
+      scroll-y="{{smallScroll}}" 
+      bindscrolltoupper="smalltoTop"
+      upper-threshold="0" 
+    >
+    <view class="list">
+      <view 
+        wx:for="{{songs}}"
+        wx:key="mvid"
+      >
+        <image src="{{item.album.picUrl}}?param=40y40" />
+        <view class="content">
+          <view class="name">{{item.name}}</view>
+          <view class="aritist">
+            {{item.artists[0].name}}-{{item.name}}
+          </view>
+        </view>
+        <text class="iconfont icon-gengduoxiao"></text>
+      </view>
+    </view>
+    </scroll-view>
+  </view>
+</scroll-view>
