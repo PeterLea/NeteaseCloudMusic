@@ -1,4 +1,5 @@
 // pages/musicSquare/components/TabBar/TabBar.js
+const http = require('../../../../utils/http.js')
 Component({
   /**
    * 组件的属性列表
@@ -14,19 +15,41 @@ Component({
     currentTag:"华语"
   },
   lifetimes:{
-    attached:function(){
+    attached:async function(){
+      let result = await http.getData({
+        url: "http://gzy.show:3000/top/playlist",
+        data: {
+          offset: 0,
+          limit: 20,
+          cat: this.data.currentTag,
+        }
+      })
+      if (result.statusCode === 200) {
+        console.log(result.data.playlists)
+        this.triggerEvent('getAlbumList', result.data.playlists)
+      }
     }
   },
   /**
    * 组件的方法列表
    */
   methods: {
-    handleClick(ev){
+    async handleClick(ev){
       let currentTag = ev.target.dataset.name
       this.setData({
         "currentTag":currentTag
+      })
+      let result = await http.getData({
+        url:"http://gzy.show:3000/top/playlist",
+        data:{
+          offset:0,
+          limit:20,
+          cat:currentTag,
+        }
+      })
+      if (result.statusCode===200){
+        this.triggerEvent('getAlbumList',result.data.playlists)
       }
-     )
     }
   }
 

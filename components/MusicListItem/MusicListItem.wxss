@@ -1,0 +1,30 @@
+/* components/MusicListItem/MusicListItem.wxss */
+.musiclist_item{
+  width: 100%;
+  height: 100%;
+  padding: 0 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.musiclist_item .coverImage{
+  height: 76.4%;
+  width:calc( 100% - 20rpx );
+  border-radius: 16rpx;
+}
+
+.musiclist_item .title{
+  flex: 1;
+  min-height: 0;
+  box-sizing: border-box;
+  padding-right: 10rpx;
+  font-size: 24rpx;
+  color: #333334;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+}

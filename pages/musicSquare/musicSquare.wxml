@@ -8,5 +8,6 @@
       <image src="../../assets/more.png" />
     </view>
   </view>
-  <TabBar hotCate ="{{hotCate}}"></TabBar>
+  <TabBar bind:getAlbumList = "getAlbumList" hotCate ="{{hotCate}}"></TabBar>
+  <ListDetail albumList = "{{albumList}}"></ListDetail>
 </view>

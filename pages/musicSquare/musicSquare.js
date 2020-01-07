@@ -1,13 +1,12 @@
 // pages/musicSquare/musicSquare.js
 const http = require('../../utils/http.js')
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    hotCate:[1,2,3,4,5],
-    text:"hello"
+    hotCate:[],
+    albumList:[]
   },
 
   /**
@@ -25,6 +24,14 @@ Page({
     // })
   },
 
+  /* 获取歌单列表详情 */
+
+  getAlbumList:async function(ev){
+    await this.setData({
+      "albumList":ev.detail
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -35,7 +42,6 @@ Page({
     this.setData({
       "hotCate":result.data.tags
     })
-    console.log(this.data.hotCate)
   },
 
   /**

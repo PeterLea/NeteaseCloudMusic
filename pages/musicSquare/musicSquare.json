@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "TabBar":"./components/TabBar/TabBar"
+    "TabBar":"./components/TabBar/TabBar",
+    "ListDetail":"./components/ListDetail/ListDetail"
   }
 }

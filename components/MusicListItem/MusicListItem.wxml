@@ -1,0 +1,5 @@
+<!--components/MusicListItem/MusicListItem.wxml-->
+<view class="musiclist_item">
+<image class="coverImage" src="{{coverImgUrl}}"></image>
+<view class="title">{{name}}</view>
+</view>

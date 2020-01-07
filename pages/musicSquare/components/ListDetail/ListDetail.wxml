@@ -1,0 +1,12 @@
+
+<view class="albumWrap">
+  <view class="albumList">
+    <MusicListItem wx:for="{{albumList}}" 
+    name="{{item.name}}" 
+    coverImgUrl="{{item.coverImgUrl}}"
+    wx:key="unique"
+    class="item"
+    
+    ></MusicListItem>
+  </view>
+</view>
