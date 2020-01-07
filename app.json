@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/recommendDaily/recommendDaily",
     "pages/find/find",
-    "pages/musicSquare/musicSquare"
+    "pages/musicSquare/musicSquare",
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

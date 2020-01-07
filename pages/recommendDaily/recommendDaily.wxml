@@ -1,0 +1,23 @@
+<!--pages/recommendDaily/recommendDaily.wxml-->
+<view class="toptitle">
+  <text class="iconfont icon-fanhui1"></text>
+  <text class="iconfont icon-wenti"></text>
+  <view class="icon-music">
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+</view>
+<songList songs="{{songs}}">
+  <view slot="tips" class="tips">
+    <text >04</text>
+    <text >/01</text>
+  </view>
+  <view slot="playmenu" class="playmenu">
+    <text class="iconfont icon-bofang"></text>
+    <text class="playall">播放全部</text>
+    <text class="iconfont icon-gengduo1"></text>
+    <text class="choosemore">多选</text>
+  </view>
+</songList>

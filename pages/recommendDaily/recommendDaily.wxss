@@ -1,0 +1,85 @@
+/* pages/recommendDaily/recommendDaily.wxss */
+page{
+  height: 100%;
+}
+songList{
+  position: relative;
+}
+.toptitle{
+  display: flex;
+  width: 100%;
+  position: absolute;
+  align-items: center;
+  height: 88rpx;
+  top:40rpx;
+  left:0;
+  z-index: 3;
+}
+.iconfont{
+  color: #fff;
+  font-size: 44rpx;
+  margin-left: 34rpx;
+  line-height: 1;
+}
+.icon-fanhui1{
+  flex:1;
+}
+.icon-wenti{
+  font-size: 60rpx;
+  flex:0;
+}
+.icon-music{
+  flex:0;
+  width: 60rpx;
+}
+.icon-music text::before{
+  width: 3rpx;
+  background: #fff;
+  margin-left:10rpx;
+  display: block;
+}
+.icon-music text:nth-child(1)::before{
+  height: 24rpx;
+}
+.icon-music text:nth-child(2)::before{
+  height: 44rpx;
+}
+.icon-music text:nth-child(3)::before{
+  height: 28rpx;
+}
+.icon-music text:nth-child(4)::befores{
+  height: 36rpx;
+}
+.tips{
+  height: 250rpx;
+}
+.playmenu{
+  display: flex;
+  height: 100rpx;
+  background: #fff;
+  border-radius: 38rpx 38rpx 0 0;
+  color: #333434;
+  align-items: center;
+}
+.playmenu>text{
+  line-height: 1;
+}
+.icon-bofang{
+  color: #333434;
+  margin-left: 22rpx;
+  margin-right: 20rpx;
+}
+.playall{
+  font-weight: 549;
+  font-size: 32rpx;
+  flex:1;
+}
+.icon-gengduo1{
+  color: #333434;
+  font-size: 20rpx;
+}
+.choosemore{
+  font-size: 26rpx;
+  margin-left: 8rpx;
+  margin-right: 35rpx;
+}

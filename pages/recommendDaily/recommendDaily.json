@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "songList": "/components/songList/songList"
+  }
+}

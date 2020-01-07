@@ -1,0 +1,57 @@
+/* components/songList/songList.wxss */
+@import '/style/iconfont.wxss';
+.wrap{
+  height:100%;
+  padding-top:128rpx;
+  position: relative;
+  box-sizing: border-box;
+  background: url('http://gzy.show:60001/img/background.d7b7204f.jpg') no-repeat;
+  background-size: contain;
+}
+.scrollBig{
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  box-sizing: border-box;
+  top:350rpx;
+  z-index: 5;
+}
+.scrollSmall{
+  flex: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.list{
+  background: #fff;
+  min-height: 300rpx;
+  padding: 0 32rpx;
+}
+.list>view{
+  height: 100rpx;
+  display: flex;
+}
+.list image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+.content{
+  flex: 1;
+}
+.aritist{
+  line-height: 27rpx;
+  height: 27rpx;
+  font-size: 23rpx;
+  color: #808080;
+}
+.name{
+  line-height: 46rpx;
+  color: 333334;
+  margin-bottom: 7rpx;
+}
+.icon-gengduoxiao{
+  color: #b3b3b3;
+  font-size: 40rpx;
+}
