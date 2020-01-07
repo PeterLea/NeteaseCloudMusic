@@ -1,0 +1,26 @@
+/* components/child-component/child-component.wxss */
+.recommend-main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+}
+.recommend-item{
+  width: 33.3%;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.recommend-item .img{
+  width: 100%;
+  height: 214rpx;
+  border-radius: 10rpx;
+}
+.recommend-title{
+  font-size: 26rpx;
+  display: inline-block;
+  height: 80rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

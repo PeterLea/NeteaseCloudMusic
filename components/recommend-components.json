@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "child-component":"/components/child-component/child-component"
+  }
+}
