@@ -1,0 +1,83 @@
+<!--pages/find/find.wxml-->
+<view class="find-container">
+<view class="find-top">
+<mp-icon 
+  type="outline" extClass="mike" icon="mike" color="black" />
+<mp-searchbar 
+  extClass="searchbar" color="black" />
+<mp-icon 
+  type="outline" extClass="music" icon="music" color="black" />
+</view>
+<view class="swiper">
+   <swiper indicator-dots="{{indicatorDots}}" 
+   indicator-color="{{beforeColor}}" 
+  indicator-active-color="{{afterColor}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imglist}}" wx:key="bannerId">
+          <swiper-item>
+            <image class="swiper-img" src="{{item.pic}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+</view>
+<view class="nav">
+
+<view class="nav-item">
+<view class="nav-round">
+<mp-icon 
+  type="outline" extClass="email" 
+  color="white"  size="{{30}}"  
+  icon="email"/>
+</view>
+<view class="nav-text">每日推荐</view>
+</view>
+
+<view class="nav-item">
+<view class="nav-round">
+<mp-icon 
+  type="outline" extClass="shop" 
+  color="white"  size="{{30}}"  
+  icon="shop"/>
+</view>
+<view  class="nav-text">歌单</view>
+</view>
+
+<view class="nav-item">
+<view class="nav-round">
+<mp-icon 
+  type="outline" extClass="music" 
+  color="white"  size="{{30}}"  
+  icon="music"/>
+</view>
+<view  class="nav-text">排行榜</view>
+</view>
+
+<view class="nav-item">
+<view class="nav-round">
+<mp-icon 
+  type="outline" extClass="keyboard" 
+  color="white"  size="{{30}}"  
+  icon="keyboard"/>
+</view>
+<view  class="nav-text">电台</view>
+</view>
+
+<view class="nav-item">
+<view class="nav-round">
+<mp-icon 
+  type="outline" extClass="tv" 
+  color="white"  size="{{30}}"  
+  icon="tv"/>
+</view>
+<view  class="nav-text">直播</view>
+</view>
+</view>
+
+<view class="recommend">
+<view class="recommend-head">
+<text class="recommend-left">推荐歌单</text>
+<text class="recommend-right">歌单广场</text>
+</view>
+<recommend-component></recommend-component>
+</view>
+</view>

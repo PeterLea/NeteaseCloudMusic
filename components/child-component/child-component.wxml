@@ -1,0 +1,9 @@
+<!--components/child-component/child-component.wxml-->
+<view class="recommend-main">
+<view wx:for="{{list}}"  wx:key="item" class="recommend-item">
+
+<image class="img" src="{{item.picUrl}}"></image>
+
+<text class="recommend-title">{{item.name}}</text>
+</view>
+</view>

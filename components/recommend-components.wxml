@@ -1,0 +1,4 @@
+<!--components/seach-components.wxml-->
+<view>
+ <child-component list="{{list}}"> </child-component>
+</view>

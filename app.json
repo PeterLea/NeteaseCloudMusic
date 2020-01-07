@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/musicSquare/musicSquare",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/find/find",
+    "pages/musicSquare/musicSquare"
   ],
   "window": {
     "backgroundTextStyle": "light",
