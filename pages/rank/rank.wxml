@@ -1,0 +1,33 @@
+<view class="header">
+  <view class="btn-back"></view>
+  <span>排行榜</span>
+  <text class="btn-back iconfont icon-paihang"></text>
+</view>
+<view class="rank-body">
+  <view class="rank-box">
+    <text class="title">官方榜</text>
+    <view class="box-item" wx:for="{{officialList}}" wx:key="id">
+      <view class="view-img">
+        <image class="item-img" src="{{item.coverImgUrl}}"></image>
+        <text class="update-time">{{item.updateFrequency}}</text>
+      </view>
+      <view class="item-song">
+        <text class="song-body">{{item.tracks[0].first}} - {{item.tracks[0].second}}</text>
+        <text class="song-body">{{item.tracks[1].first}} - {{item.tracks[1].second}}</text>
+        <text class="song-body">{{item.tracks[2].first}} - {{item.tracks[2].second}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="rank-box">
+    <text class="title">全球榜</text>
+      <view class="global-box">
+        <view class="global-box-item" wx:for="{{globalList}}" wx:key="id">
+          <view class="view-img">
+            <image class="item-img" src="{{item.coverImgUrl}}"></image>
+            <text class="update-time">{{item.updateFrequency}}</text>
+          </view>
+          <text class="global-item-title">{{item.name}}</text>
+        </view>
+      </view>
+  </view>
+</view>
