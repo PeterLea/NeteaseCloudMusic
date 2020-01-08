@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/newAlbum/newAlbum",
     "pages/rank/rank",
     "pages/recommendDaily/recommendDaily",
     "pages/musicSquare/musicSquare",

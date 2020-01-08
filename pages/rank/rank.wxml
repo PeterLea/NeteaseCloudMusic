@@ -1,7 +1,7 @@
 <view class="header">
-  <view class="btn-back"></view>
+  <view class="btn-back iconfont icon-fanhui1"></view>
   <span>排行榜</span>
-  <text class="btn-back iconfont icon-paihang"></text>
+  <text class="iconfont icon-paihang btn-rank"></text>
 </view>
 <view class="rank-body">
   <view class="rank-box">
