@@ -3,7 +3,8 @@
     "pages/recommendDaily/recommendDaily",
     "pages/find/find",
     "pages/musicSquare/musicSquare",
-    "pages/index/index"
+    "pages/index/index",
+    "components/chooseAll/chooseAll"
   ],
   "window": {
     "backgroundTextStyle": "light",
