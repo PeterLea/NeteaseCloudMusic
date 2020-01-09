@@ -24,22 +24,46 @@
   border: 2rpx solid #eacfd6;
   margin:15rpx 0;
   border-radius: 25rpx;
+  display: flex;
+  position: relative;
 }
 .header-text{
   line-height: 56rpx;
-  background: #fff;
   color: #f64851;
   border-radius: 25rpx;
   width: 138rpx;
   display: block;
-  float: left;
+  transition: 0.2s;
 }
 .header-text-active{
-  background: #ef3d4d;
   color: #fff;
   line-height: 56rpx;
   border-radius: 25rpx;
   width: 138rpx;
   display: block;
-  float: left;
+  transition: 0.2s;
+}
+.header-text-bg-left{
+  position: absolute;
+  width: 139rpx;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #f64851;
+  z-index: -1;
+  transform: translate(0, 0);
+  transition: 0.2s;
+  border-radius: 25rpx;
+}
+.header-text-bg-right{
+  position: absolute;
+  width: 139rpx;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #f64851;
+  z-index: -1;
+  transform: translate(100%, 0);
+  border-radius: 25rpx;
+  transition: 0.2s;
 }

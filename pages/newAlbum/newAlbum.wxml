@@ -1,6 +1,7 @@
 <view class="header">
   <text class="iconfont icon-fanhui1 btn-back"></text>
   <view class="header-text-box">
+    <view class="{{defaultPage === 'song' ? 'header-text-bg-left' : 'header-text-bg-right'}}"></view>
     <view class="{{defaultPage === 'song' ? 'header-text-active' : 'header-text'}}" bindtap="onChangePage" data-name="song">新歌</view>
     <view class="{{defaultPage === 'album' ? 'header-text-active' : 'header-text'}}" bindtap="onChangePage" data-name="album">新碟</view>
   </view>
