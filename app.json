@@ -1,16 +1,28 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/recommendDaily/recommendDaily",
     "pages/find/find",
-    "pages/musicSquare/musicSquare",
-    "pages/index/index",
-    "components/chooseAll/chooseAll"
+    "pages/musicSquare/musicSquare"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#db2c1f",
     "navigationBarTitleText": "网易云音乐",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [{
+      "pagePath": "pages/find/find",
+      "text": "发现"
+    }, {
+      "pagePath": "pages/recommendDaily/recommendDaily",
+      "text": "日志"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
