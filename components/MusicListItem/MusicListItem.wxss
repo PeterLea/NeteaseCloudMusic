@@ -5,6 +5,7 @@
   padding: 0 10rpx;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .musiclist_item .coverImage{
@@ -27,4 +28,12 @@
   -webkit-line-clamp: 2;
   /*! autoprefixer: off */
   -webkit-box-orient: vertical;
+}
+
+.playcount{
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+  color: #fff;
+  font-size: 24rpx;
 }

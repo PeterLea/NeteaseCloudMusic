@@ -18,5 +18,5 @@
 }
 .tab_item.active{
   color: #ff3a3a;
-  border-bottom: 4rpx solid #ff3a3a;
+  border-bottom: 8rpx solid #ff3a3a;
 }

@@ -1,2 +1,3 @@
 <!--pages/musicSquare/components/Swipper/Swipper.wxml-->
 
+<view> 这个是swipper</view>
