@@ -25,7 +25,7 @@ Page({
     await wx.request({
       url: 'http://gzy.show:3000/toplist/detail',
       header: {
-        'cookie': '__remember_me=true; Expires=Sun 19-Jan-2020 14:19:14 GMT; Path=/' 
+        'cookie': 'MUSIC_U=b10b3a0facf5db405ffc605746009e4b0288ad784e32a0b65833da3eb3812193d0fd5454d1674bc0e1f940b832e7af067955a739ab43dce1' 
       },
       success: (res)=> {
         this.setData({

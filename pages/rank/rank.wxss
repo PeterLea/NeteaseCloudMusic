@@ -10,13 +10,11 @@
   font-weight: 600;
 }
 .btn-back,.btn-rank{
-  width: 44rpx;
-  height: 44rpx;
-  
+  width: 88rpx;
+  height: 88rpx;
 }
 .btn-back{
   margin-left: 30rpx;
-  background-color: red;
 }
 .btn-rank{
   margin-right: 27rpx;

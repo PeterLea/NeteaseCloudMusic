@@ -1,12 +1,13 @@
 {
   "pages": [
     "pages/find/find",
-    "pages/rank/rank",
-    "pages/recommendDaily/recommendDaily",
     "pages/musicSquare/musicSquare",
-    "pages/video/video",
     "pages/profile/profile",
+    "pages/rank/rank",
+    "pages/newAlbum/newAlbum",
     "pages/cloudVillage/cloudVillage",
+    "pages/recommendDaily/recommendDaily",
+    "pages/video/video",
     "pages/account/account"
   ],
   "window": {
