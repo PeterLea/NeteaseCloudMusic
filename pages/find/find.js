@@ -12,7 +12,9 @@ Page({
      interval: 2000,
      duration: 1000,
      beforeColor:'white',
-     afterColor:'red'
+     afterColor:'red',
+     mvlist:[],
+     num:4
   },
 
   /**
@@ -24,6 +26,14 @@ Page({
       success:(res)=>{
        this.setData({
          imglist:res.data.banners
+       }) 
+      }
+    }),
+    wx.request({
+      url: 'http://gzy.show:3000/mv/exclusive/rcmd?limit=4',
+      success:(res)=>{
+       this.setData({
+         mvlist:res.data.data
        }) 
       }
     })
@@ -74,7 +84,16 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    let num=9
+    wx.request({
+      url: `http://gzy.show:3000/mv/exclusive/rcmd?limit=${num}`,
+      success:(res)=>{ 
+       this.setData({
+         mvlist:res.data.data
+       }) 
+      }
+    })
+    
   },
 
   /**

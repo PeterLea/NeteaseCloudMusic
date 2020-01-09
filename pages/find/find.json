@@ -2,6 +2,8 @@
   "usingComponents": {  
     "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon",
     "mp-searchbar": "/miniprogram_npm/weui-miniprogram/searchbar/searchbar",
-    "recommend-component":"/components/recommend-components"
+    "recommend-component":"/components/recomend/recommend-components",
+    "new-component":"/components/new/new-component",
+    "mv-component":"/components/mv/mv-component"
   }
 }

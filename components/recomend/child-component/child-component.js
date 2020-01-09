@@ -14,13 +14,13 @@ Component({
  itemlist:[]
   },
 attached(){
- console.log(this.properties.list);
+
  
 },
   /**
    * 组件的方法列表
    */
   methods: {
-
+  
   }
 })

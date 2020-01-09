@@ -30,7 +30,7 @@ Component({
           header:{
           "Cookie":res.cookies[0]
           },
-          success:(res)=>{
+          success:(res)=>{  
            this.setData({
              list:res.data.recommend.slice(0,6)
            }) 

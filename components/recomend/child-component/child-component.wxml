@@ -1,8 +1,13 @@
 <!--components/child-component/child-component.wxml-->
 <view class="recommend-main">
 <view wx:for="{{list}}"  wx:key="item" class="recommend-item">
-
+<view class="img-box">
+<view class="img-top" wx:if="{{item.playcount}}"> 
+<mp-icon 
+  type="outline" extClass="play" icon="play" color="white" />
+ {{(item.playcount%10000)+'万'}}</view>
 <image class="img" src="{{item.picUrl}}"></image>
+</view>
 
 <text class="recommend-title">{{item.name}}</text>
 </view>
