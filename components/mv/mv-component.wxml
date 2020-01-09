@@ -1,0 +1,10 @@
+<!--components/mv/mv-component.wxml-->
+<view class="mv-item" wx:for="{{list}}" wx:key="id">
+    <image class="mv-img" src="{{item.cover}}"></image> 
+    <text class="mv-last">{{item.name}} </text> 
+    <view class="img-box">
+    <mp-icon 
+  type="outline" extClass="play" icon="play" color="white" />
+     <text class="img-top">{{ (item.playCount/10000) +'万'}}</text>
+    </view>
+</view>

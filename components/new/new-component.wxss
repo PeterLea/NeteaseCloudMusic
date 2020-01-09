@@ -1,0 +1,39 @@
+/* components/new/new-component.wxss */
+.new-head{
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+}
+.new-left{
+  font-size: 38rpx;
+  color: #333;
+}
+.new-left-first{
+  border-right: 1rpx solid #e6e6e6;
+  padding-right: 15rpx;
+  color: #999;
+  font-size: 32rpx;
+  
+}
+.new-left-last{
+  padding-left: 15rpx;
+  color: #999;
+  font-size: 32rpx;
+}
+.new-right{
+  border: 1px solid #e6e6e6;
+  font-size: 26rpx;
+  color: #111;
+  border-radius: 20rpx;
+  padding: 5rpx 10rpx;
+}
+.new-item{
+  height: 290rpx;
+}
+.active{
+  color: #000;
+  font-size: 38rpx;
+}

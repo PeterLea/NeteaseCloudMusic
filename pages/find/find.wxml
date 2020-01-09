@@ -4,10 +4,13 @@
 <mp-icon 
   type="outline" extClass="mike" icon="mike" color="black" />
 <mp-searchbar 
-  extClass="searchbar" color="black" />
+  ext-class="sear" color="black" />
 <mp-icon 
   type="outline" extClass="music" icon="music" color="black" />
 </view>
+
+<view class="main">
+
 <view class="swiper">
    <swiper indicator-dots="{{indicatorDots}}" 
    indicator-color="{{beforeColor}}" 
@@ -21,7 +24,6 @@
       </swiper>
 </view>
 <view class="nav">
-
 <view class="nav-item">
 <view class="nav-round">
 <mp-icon 
@@ -31,7 +33,6 @@
 </view>
 <view class="nav-text">每日推荐</view>
 </view>
-
 <view class="nav-item">
 <view class="nav-round">
 <mp-icon 
@@ -79,5 +80,24 @@
 <text class="recommend-right">歌单广场</text>
 </view>
 <recommend-component></recommend-component>
+<new-component></new-component>
+
+<view class="mv">
+<view class="mv-head">
+<text class="mv-left">云村精选</text>
+<view class="mv-right"> 
+<mp-icon 
+  type="outline" extClass="refresh" 
+  color="black"  size="{{20}}"  
+  icon="refresh"/> 获取新内容
+</view>
+</view>
+</view>
+</view>
+
+<view class="mv-box">
+<mv-component list="{{mvlist}}"></mv-component>
+</view>
+
 </view>
 </view>

@@ -1,7 +1,15 @@
 /* pages/find/find.wxss */
+page{
+  height: 100%;
+}
 .find-container{
   height: 100%;
   box-sizing: border-box;
+  position: relative;
+}
+.main{
+  height: 100%;
+  overflow-y: scroll;
 }
 .find-top{
   display: flex;
@@ -12,11 +20,17 @@
   padding: 0 26rpx 0 20rpx;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
 }
-.find-top .searchbar{
+.find-top .sear{
   height: 78rpx;
   border-radius: 30rpx;
   width:580rpx;
+  background: white;
+  border:1rpx solid #999; 
 }
 .swiper{
   width: 100%;
@@ -80,4 +94,24 @@
   color: #555;
   border-radius: 20rpx;
   padding: 5rpx 10rpx;
+}
+
+.mv-box{                                                                                                                       height: 100%;
+ 
+}
+.mv-head{
+  height: 92rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+}
+.mv-left{
+  font-size: 32rpx;
+  color: #000;
+}
+.mv-right{
+  font-size: 28rpx;
+  color: #000;
 }

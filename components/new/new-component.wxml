@@ -1,0 +1,17 @@
+<!--components/new/new-component.wxml-->
+<view class="new">
+<view class="new-head">
+
+ <view class="new-left"> 
+ <text class="new-left-first {{select===1?'active':''}}"
+  bindtap="handle"  data-index="1"> 新碟</text>
+ <text  class="new-left-last {{select===0?'active':''}}" 
+  bindtap="handle" data-index="0">新歌</text> 
+ </view>
+
+  <text wx:if="{{isshow===1}}" class="new-right"> 更多新碟</text>
+  <text class="new-right" wx:else> 更多新歌</text>
+</view>
+<child-component wx:if="{{select===1}}" list="{{albumlist}}"></child-component>
+<child-component wx:else list="{{newsonglist}}"></child-component>
+</view>
