@@ -1,16 +1,56 @@
 {
   "pages": [
+    "pages/find/find",
     "pages/rank/rank",
     "pages/recommendDaily/recommendDaily",
     "pages/musicSquare/musicSquare",
-    "pages/find/find",
-    "pages/index/index"
+    "pages/video/video",
+    "pages/profile/profile",
+    "pages/cloudVillage/cloudVillage",
+    "pages/account/account"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#db2c1f",
     "navigationBarTitleText": "网易云音乐",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#979797",
+    "selectedColor": "#ff3c3c",
+    "backgroundColor": "#fcfafa",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "assets/tabbarImage/find.png",
+        "selectedIconPath": "assets/tabbarImage/find-active.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "assets/tabbarImage/video.png",
+        "selectedIconPath": "assets/tabbarImage/video-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "assets/tabbarImage/profile.png",
+        "selectedIconPath": "assets/tabbarImage/profile-active.png"
+      },
+      {
+        "pagePath": "pages/cloudVillage/cloudVillage",
+        "text": "云村",
+        "iconPath": "assets/tabbarImage/cloudVillage.png",
+        "selectedIconPath": "assets/tabbarImage/cloudVillage-active.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "账号",
+        "iconPath": "assets/tabbarImage/account.png",
+        "selectedIconPath": "assets/tabbarImage/account-active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

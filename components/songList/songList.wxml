@@ -3,34 +3,38 @@
   class="wrap" 
   scroll-y="true"
   upper-threshold="0" 
-  bindscrolltoupper="handletoTop"
-  bindscrolltolower="handletoBottom"
+  bindscroll="bigscrolling"
+  throttle="{{false}}"	
+  style="background: url('{{bgimage}}') no-repeat;background-size: contain;padding-top:{{paddingTop}}rpx" 
 >
   <slot name="tips"></slot>
   <view class="scrollBig">
+    <image hidden="{{!showTopImage}}" class="lefttopLine" src="/assets/topline.png" />
+    <image hidden="{{!showTopImage}}" class="righttopLine" src="/assets/topline.png" />
     <slot name="playmenu"></slot>
-    <!-- <view class="playmenu">12</view> -->
     <scroll-view 
       class="scrollSmall" 
       scroll-y="{{smallScroll}}" 
-      bindscrolltoupper="smalltoTop"
       upper-threshold="0" 
     >
-    <view class="list">
-      <view 
-        wx:for="{{songs}}"
-        wx:key="mvid"
-      >
-        <image src="{{item.album.picUrl}}?param=40y40" />
-        <view class="content">
-          <view class="name">{{item.name}}</view>
-          <view class="aritist">
-            {{item.artists[0].name}}-{{item.name}}
+    <checkbox-group bindchange="checkgroupChange">
+      <view class="list {{chooseAll?'choose':''}}" >
+        <view 
+          wx:for="{{songs}}"
+          wx:key="mvid"
+        >
+          <checkbox wx:if="{{chooseAll}}" value="{{index}}" checked="{{hasChooseall}}"/>
+          <image src="{{item.album.picUrl}}?param=40y40" />
+          <view class="content">
+            <view class="name ellip">{{item.name}}</view>
+            <view class="aritist ellip">
+              {{item.artists[0].name}}-{{item.name}}
+            </view>
           </view>
+          <text class="iconfont icon-gengduoxiao"></text>
         </view>
-        <text class="iconfont icon-gengduoxiao"></text>
       </view>
-    </view>
+    </checkbox-group>
     </scroll-view>
   </view>
 </scroll-view>

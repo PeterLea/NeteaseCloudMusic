@@ -1,4 +1,5 @@
 // pages/recommendDaily/recommendDaily.js
+const http = require('../../utils/http.js')
 Page({
 
   /**
@@ -6,33 +7,39 @@ Page({
    */
   data: {
     songs:[],
-    smallScroll:false
+    smallScroll:false,
+    day:new Date().getDate()>9?new Date().getDate():'0'+new Date().getDate(),
+    mounth:new Date().getMonth()+1>9?new Date().getMonth()+1:'0'+(new Date().getMonth()+1),
+    chooseAll:false,
+    hasChoose:false,
+    hasChooseall:false
   },
-  
+  clickChoosemore(){
+    this.setData({
+      "chooseAll":!this.data.chooseAll
+    })
+  },
+  haschecked(e){
+    this.setData({
+      "hasChoose":e.detail.hasChoose
+    })
+  },
+  checkboxtap(){
+    this.setData({
+      "hasChooseall":!this.data.hasChooseall
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  async onLoad(options) {
-/*     await wx.request({
-      url: 'http://gzy.show:3000/login/cellphone?phone=18595926710&password=lyuqu981127.',
-      success(res){
-        wx.setStorageSync('cookie', res.cookies[0])
-      }
-    }) */
-    await wx.request({
-      url: 'http://gzy.show:3000/recommend/songs',
-      header: {
-        'Cookie': 'MUSIC_U=b10b3a0facf5db405ffc605746009e4ba749867c644765f5c4d0d387d0eed0e61031d425e752a9123acfc9588bc9d59b41049cea1c6bb9b6; Expires=Tue 21-Jan-2020 14:22:11 GMT; Path=/'
-      },
-      success:(res)=>{
-        this.setData({
-          songs: res.data.recommend
-        })
-        console.log(res.data.recommend)
-      }
+  onLoad:async function(options){
+    let result =  await http.getData({
+      url:'http://gzy.show:3000/recommend/songs'
+    })
+    this.setData({
+      "songs": result.data.recommend
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

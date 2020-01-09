@@ -5,7 +5,7 @@
   padding-top:128rpx;
   position: relative;
   box-sizing: border-box;
-  background: url('http://gzy.show:60001/img/background.d7b7204f.jpg') no-repeat;
+  /* background: url('http://gzy.show:60001/img/background.d7b7204f.jpg') no-repeat; */
   background-size: contain;
 }
 .scrollBig{
@@ -27,6 +27,9 @@
   min-height: 300rpx;
   padding: 0 32rpx;
 }
+.choose{
+  padding-left:0;
+}
 .list>view{
   height: 100rpx;
   display: flex;
@@ -39,6 +42,7 @@
 }
 .content{
   flex: 1;
+  overflow: hidden;
 }
 .aritist{
   line-height: 27rpx;
@@ -46,12 +50,30 @@
   font-size: 23rpx;
   color: #808080;
 }
+.ellip{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .name{
   line-height: 46rpx;
   color: 333334;
   margin-bottom: 7rpx;
+  width: 100%; 
 }
 .icon-gengduoxiao{
   color: #b3b3b3;
   font-size: 40rpx;
+}
+.lefttopLine,.righttopLine{
+  width: 16rpx;
+  height: 32rpx;
+  position: absolute;
+  top:-10rpx;
+}
+.lefttopLine{
+  left:144rpx;
+}
+.righttopLine{
+  right:144rpx;
 }
