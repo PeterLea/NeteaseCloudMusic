@@ -24,6 +24,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleTap:()=>{
+      console.log("点击事件")
+    }
   }
 })

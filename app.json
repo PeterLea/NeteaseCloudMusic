@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/rank/rank",
-    "pages/recommendDaily/recommendDaily",
     "pages/musicSquare/musicSquare",
     "pages/find/find",
+    "pages/rank/rank",
+    "pages/recommendDaily/recommendDaily",
     "pages/index/index"
   ],
   "window": {

@@ -6,7 +6,9 @@ Page({
    */
   data: {
     hotCate:[],
-    albumList:[]
+    albumList:[],
+    currentPage:0,
+    currentTag:"华语"
   },
 
   /**
@@ -31,7 +33,19 @@ Page({
       "albumList":ev.detail
     })
   },
+  getCurrentTag: async function (ev) {
+    await this.setData({
+      "currentTag": ev.detail
+    })
+  },
 
+  setCurrentPage: async function (ev) {
+    console.log(ev.detail)
+    await this.setData({
+      "currentPage": ev.detail
+    })
+  },
+  /* 接收子组件传入的page变化 */
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -74,8 +88,22 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
+  onReachBottom:async function () {
+    this.data.currentPage++
+    let result = await http.getData({
+      url: "http://gzy.show:3000/top/playlist",
+      data: {
+        offset:this.data.currentPage*21,
+        limit: 21,
+        cat: this.data.currentTag,
+      }
+    })
+    this.setData({
+      "albumList": [
+        ...this.data.albumList,
+        ...result.data.playlists
+      ]
+    })
   },
 
   /**

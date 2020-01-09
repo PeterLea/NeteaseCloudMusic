@@ -4,9 +4,10 @@
     <MusicListItem wx:for="{{albumList}}" 
     name="{{item.name}}" 
     coverImgUrl="{{item.coverImgUrl}}"
+    playCount="{{item.playCount}}"
     wx:key="unique"
     class="item"
-    
+    bindtap="handleTap"
     ></MusicListItem>
   </view>
 </view>

@@ -12,7 +12,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    currentTag:"华语"
+    currentTag:"华语",
+    page:0
   },
   lifetimes:{
     attached:async function(){
@@ -20,12 +21,12 @@ Component({
         url: "http://gzy.show:3000/top/playlist",
         data: {
           offset: 0,
-          limit: 20,
+          limit: 21,
           cat: this.data.currentTag,
         }
       })
       if (result.statusCode === 200) {
-        console.log(result.data.playlists)
+        this.triggerEvent('getCurrentTag', this.data.currentTag)
         this.triggerEvent('getAlbumList', result.data.playlists)
       }
     }
@@ -35,6 +36,7 @@ Component({
    */
   methods: {
     async handleClick(ev){
+      this.triggerEvent('setCurrentPage', 0)
       let currentTag = ev.target.dataset.name
       this.setData({
         "currentTag":currentTag
@@ -43,12 +45,13 @@ Component({
         url:"http://gzy.show:3000/top/playlist",
         data:{
           offset:0,
-          limit:20,
+          limit:21,
           cat:currentTag,
         }
       })
       if (result.statusCode===200){
-        this.triggerEvent('getAlbumList',result.data.playlists)
+        this.triggerEvent('getAlbumList', result.data.playlists)
+        this.triggerEvent('getCurrentTag', this.data.currentTag)
       }
     }
   }

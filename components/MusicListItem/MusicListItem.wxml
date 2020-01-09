@@ -1,5 +1,6 @@
 <!--components/MusicListItem/MusicListItem.wxml-->
-<view class="musiclist_item">
-<image class="coverImage" src="{{coverImgUrl}}"></image>
-<view class="title">{{name}}</view>
+<view class="musiclist_item" bindtap="{{clickEvent}}">
+  <image class="coverImage" src="{{coverImgUrl}}"></image>
+  <view class="title">{{name}}</view>
+  <text class="playcount">{{computedCount}}</text>
 </view>

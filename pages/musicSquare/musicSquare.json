@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "TabBar":"./components/TabBar/TabBar",
-    "ListDetail":"./components/ListDetail/ListDetail"
+    "ListDetail":"./components/ListDetail/ListDetail",
+    "mySwipper":"./components/Swipper/Swipper"
   }
 }
