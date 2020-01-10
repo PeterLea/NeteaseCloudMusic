@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "listType": "./components/newsong/listType",
+    "newcd": "./components/newcd/newcd"
+  }
 }

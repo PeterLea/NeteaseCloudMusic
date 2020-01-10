@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/newAlbum/newAlbum",
     "pages/musicSquare/musicSquare",
     "pages/find/find",
     "pages/profile/profile",
     "pages/rank/rank",
-    "pages/newAlbum/newAlbum",
     "pages/cloudVillage/cloudVillage",
     "pages/recommendDaily/recommendDaily",
     "pages/video/video",
