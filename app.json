@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/musicSquare/musicSquare",
     "pages/find/find",
+    "pages/musicSquare/musicSquare",
     "pages/profile/profile",
     "pages/rank/rank",
     "pages/newAlbum/newAlbum",

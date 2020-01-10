@@ -170,6 +170,7 @@ Component({
             this.setData({
                 searchState: false
             });
+            this.triggerEvent('cancel', {})
         },
         inputChange: function inputChange(e) {
             var _this = this;

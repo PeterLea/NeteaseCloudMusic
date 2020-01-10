@@ -4,13 +4,14 @@
 <mp-icon 
   type="outline" extClass="mike" icon="mike" color="black" />
 <mp-searchbar 
+bindfocus="bindfocus"  bindcancel="searchCancel" 
+bindinput="bindinput"  
   ext-class="sear" color="black" />
 <mp-icon 
   type="outline" extClass="music" icon="music" color="black" />
 </view>
 
-<view class="main">
-
+<view class="main" wx:if="{{Isshow}}">
 <view class="swiper">
    <swiper indicator-dots="{{indicatorDots}}" 
    indicator-color="{{beforeColor}}" 
@@ -24,7 +25,7 @@
       </swiper>
 </view>
 <view class="nav">
-<view class="nav-item">
+<navigator url="/pages/recommendDaily/recommendDaily"  class="nav-item">
 <view class="nav-round">
 <mp-icon 
   type="outline" extClass="email" 
@@ -32,8 +33,9 @@
   icon="email"/>
 </view>
 <view class="nav-text">每日推荐</view>
-</view>
-<view class="nav-item">
+</navigator>
+
+<navigator url="/pages/musicSquare/musicSquare" class="nav-item">
 <view class="nav-round">
 <mp-icon 
   type="outline" extClass="shop" 
@@ -41,9 +43,9 @@
   icon="shop"/>
 </view>
 <view  class="nav-text">歌单</view>
-</view>
+</navigator>
 
-<view class="nav-item">
+<navigator url="/pages/rank/rank" class="nav-item">
 <view class="nav-round">
 <mp-icon 
   type="outline" extClass="music" 
@@ -51,7 +53,7 @@
   icon="music"/>
 </view>
 <view  class="nav-text">排行榜</view>
-</view>
+</navigator>
 
 <view class="nav-item">
 <view class="nav-round">
@@ -77,7 +79,7 @@
 <view class="recommend">
 <view class="recommend-head">
 <text class="recommend-left">推荐歌单</text>
-<text class="recommend-right">歌单广场</text>
+<navigator url="/pages/musicSquare/musicSquare" class="recommend-right">歌单广场</navigator>
 </view>
 <recommend-component></recommend-component>
 <new-component></new-component>
@@ -85,7 +87,7 @@
 <view class="mv">
 <view class="mv-head">
 <text class="mv-left">云村精选</text>
-<view class="mv-right"> 
+<view class="mv-right" bindtap="handlenew"> 
 <mp-icon 
   type="outline" extClass="refresh" 
   color="black"  size="{{20}}"  
@@ -98,6 +100,6 @@
 <view class="mv-box">
 <mv-component list="{{mvlist}}"></mv-component>
 </view>
-
 </view>
+<search-component flag="{{ishot}}" searchlist="{{searchlist}}" wx:else></search-component>
 </view>
