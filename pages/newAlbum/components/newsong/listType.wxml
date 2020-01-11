@@ -1,0 +1,34 @@
+<view class="type-list-box">
+  <view class="{{typeName === '0' ? 'type-list-title-active' : 'type-list-title'}}" bindtap="handleChangelist" data-name="0">推荐</view>
+  <view class="{{typeName === '7' ? 'type-list-title-active' : 'type-list-title'}}" bindtap="handleChangelist" data-name="7">华语</view>
+  <view class="{{typeName === '96' ? 'type-list-title-active' : 'type-list-title'}}" bindtap="handleChangelist" data-name="96">欧美</view>
+  <view class="{{typeName === '16' ? 'type-list-title-active' : 'type-list-title'}}" bindtap="handleChangelist" data-name="16">韩国</view>
+  <view class="{{typeName === '8' ? 'type-list-title-active' : 'type-list-title'}}" bindtap="handleChangelist" data-name="8">日本</view>
+</view>
+
+<songList 
+  songs="{{songList}}" 
+  tipsHeight="{{151}}" 
+  paddingTop="{{0}}"
+  chooseAll = "{{chooseAll}}"
+  hasChooseall="{{hasChooseall}}"
+  bind:haschecked="haschecked"
+  >
+  <view slot="tips" class="tips">
+  </view>
+  <view wx:if="{{!chooseAll}}" slot="playmenu" class="playmenu">
+    <text class="iconfont icon-bofang" bindtap="checkboxtap"></text>
+    <text class="playall">播放全部</text>
+    <text bindtap="clickChoosemore">
+      <text class="iconfont icon-gengduo1"></text>
+      <text class="choosemore">多选</text>
+    </text>
+  </view>
+  <view wx:else slot="playmenu" class="chooseAll">
+      <checkbox-group bindchange="checkboxtap">
+        <checkbox checked="{{hasChoose}}"></checkbox>
+      </checkbox-group>
+      <text class="checkall">全选</text>
+      <text class="finish" bindtap="clickChoosemore">完成</text>
+  </view>
+</songList>
