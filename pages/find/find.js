@@ -14,7 +14,11 @@ Page({
      beforeColor:'white',
      afterColor:'red',
      mvlist:[],
-     num:4
+     num:4,
+     Isshow:true,
+     keyword:'',
+     searchlist:[],
+     ishot:true
   },
 
   /**
@@ -44,7 +48,43 @@ Page({
     //   }
     // })
   },
-
+  handlenew(){
+    wx.request({
+      url: 'http://gzy.show:3000/mv/first?limit=10',
+      success:(res)=>{
+       this.setData({
+         mvlist:res.data.data
+       }) 
+      }
+    })
+  },
+  bindfocus(){
+      this.setData({
+        Isshow:false
+      })
+  },
+  searchCancel(){
+    this.setData({
+      Isshow:true
+    })
+  },
+  bindinput(e){
+   if(e.detail.value){
+    wx.request({
+      url: `http://gzy.show:3000/search/suggest?keywords=${e.detail.value}&type=mobile`,
+      success:(res)=>{
+       this.setData({
+         ishot:false,
+         searchlist:res.data.result.allMatch
+       }) 
+      }
+    })
+  }else{
+    this.setData({
+      searchlist:[]
+    })
+  }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

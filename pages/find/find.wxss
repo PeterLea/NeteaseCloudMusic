@@ -26,17 +26,21 @@ page{
   background: white;
 }
 .find-top .sear{
-  height: 78rpx;
-  border-radius: 30rpx;
+  height: 50rpx;
+  border-radius: 40rpx;
   width:580rpx;
   background: white;
-  border:1rpx solid #999; 
+  border: thistle 1rpx solid;
 }
+
 .swiper{
   width: 100%;
   padding:10rpx 32rpx;
   height: 300rpx;
   box-sizing: border-box;
+}
+swiper{
+  height: 100%;
 }
 .swiper .swiper-img{
   width: 100%;

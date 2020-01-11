@@ -5,6 +5,6 @@
     <view class="img-box">
     <mp-icon 
   type="outline" extClass="play" icon="play" color="white" />
-     <text class="img-top">{{ (item.playCount/10000) +'万'}}</text>
+     <text class="img-top">{{ (item.playCount%10000) +'万'}}</text>
     </view>
 </view>

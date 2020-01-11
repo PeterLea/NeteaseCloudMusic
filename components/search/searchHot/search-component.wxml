@@ -1,0 +1,30 @@
+<!--components/search/search-component.wxml-->
+<view class="search" wx:if="{{!searchlist.length}}">
+<text class="title">热搜榜</text>
+<view class="search-main">
+<view wx:for="{{hotlist}}" wx:key="id" class="search-item">
+<view class="search-left">
+<text class="rank">{{index+1}}</text>
+<view class="rank-right">
+<view class="rank-top">
+<text class="rank-title">{{item.searchWord}} </text>
+<image class="hot" src="{{item.iconUrl}}"></image>
+</view>
+  <text class="rank-bottom">{{item.content}}</text>
+  </view>
+</view>
+<view class="search-right">
+{{item.score}}
+</view>
+</view>
+</view>
+</view>
+<view class="sear-main" wx:else>
+<view class="sear-item" wx:for="{{searchlist}}" wx:key="id">
+<mp-icon icon="search" color="#999" size="{{20}}"></mp-icon>
+   {{item.keyword}}
+</view>
+
+</view>
+
+
