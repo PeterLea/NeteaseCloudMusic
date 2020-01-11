@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/musicSquare/musicSquare",
     "pages/find/find",
+    "pages/newAlbum/newAlbum",
+    "pages/musicSquare/musicSquare",
     "pages/profile/profile",
     "pages/rank/rank",
-    "pages/newAlbum/newAlbum",
     "pages/cloudVillage/cloudVillage",
     "pages/recommendDaily/recommendDaily",
     "pages/video/video",
+    "pages/index/index",
     "pages/account/account"
   ],
   "window": {
@@ -22,7 +23,7 @@
     "backgroundColor": "#fcfafa",
     "list": [
       {
-        "pagePath": "pages/find/find",
+        "pagePath": "pages/index/index",
         "text": "发现",
         "iconPath": "assets/tabbarImage/find.png",
         "selectedIconPath": "assets/tabbarImage/find-active.png"

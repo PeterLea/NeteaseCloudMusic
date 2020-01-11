@@ -1,6 +1,6 @@
 <view class = "square_wrap">
   <view class="header">
-    <view class="back">
+    <view bindtap="back" class="back">
       <image src="../../assets/back.png" />
     </view>
     <text class="title">歌单广场</text>

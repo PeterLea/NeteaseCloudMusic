@@ -45,6 +45,16 @@ Page({
       "currentPage": ev.detail
     })
   },
+  back: function () {
+    wx.navigateTo({
+      url: '/pages/find/find',
+      success: function (res) { },
+      fail: function (res) {
+        console.log(res)
+       },
+      complete: function (res) { },
+    })
+  },
   /* 接收子组件传入的page变化 */
   /**
    * 生命周期函数--监听页面初次渲染完成
